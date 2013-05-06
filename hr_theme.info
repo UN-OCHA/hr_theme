@@ -1,0 +1,16 @@
+name = HumanitarianResponse Theme
+description = Theme variables for Humanitarianresponse
+core = 7.x
+package = Humanitarianresponse
+php = 5.2.4
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = humanitarianresponse_core
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = admin_theme
+features[variable][] = theme_default
+l10n path = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/%core/%project/%project-%release.%language.po
+l10n server = localize.humanitarianresponse.info
+l10n url = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/l10n_server.xml

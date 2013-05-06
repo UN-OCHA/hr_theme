@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HumanitarianResponse Theme feature.
+ */
+
+include_once('hr_theme.features.inc');
