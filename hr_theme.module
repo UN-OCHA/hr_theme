@@ -5,3 +5,23 @@
  */
 
 include_once('hr_theme.features.inc');
+
+/**
+ * Implements hook_enable()
+ */
+function hr_theme_enable() {
+  variable_set('theme_default', 'humanitarianresponse');
+  // Enable the default theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'humanitarianresponse')
+    ->execute();
+  
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'seven')
+    ->execute();
+}
